@@ -18,6 +18,7 @@ La función refrescarProductos() refresca la lista de productos disponibles en e
 
 
 --------------------------------------------------función de la tienda----------------------------------------------------
+
 Este sitio web te permite administrar los productos de una tienda en línea. Puedes agregar nuevos productos a la lista, así como eliminar productos existentes. 
 Además, puedes iniciar una compra seleccionando los productos que deseas agregar al carrito.
 
