@@ -1,0 +1,52 @@
+$negro: #111111;
+$blanco: #F9F3EE;
+$grisOscuro: #222222;
+$grisClaro: #C8C8C8;
+$grisClaroHover: #ACABAB;
+$azul: #3E60E9;
+$azulHover: #254BE6;
+$violeta: #B1AFFF;
+$verde: #DEFCF9;
+$verdeOscuro: #65647C;
+
+$sombraDark: 10px 10px 20px rgba(170,170,170,.16);
+$sombraLight: 10px 10px 20px rgba(0,0,0,.16);
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: $verde;
+	font-family: 'Roboto', sans-serif;
+	transition: .3s ease all;
+
+	&.dark {
+		background: $negro;
+	}
+}
+
+a {
+	color: $grisOscuro;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	padding: 50px 0;
+}
+
+footer {
+	/*Centramos los elementos dentro del footer*/
+	margin: auto;
+	color: $negro;
+	text-align: center;
+	body.dark & {
+		color: $blanco;
+	}
+}

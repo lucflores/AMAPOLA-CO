@@ -1,0 +1,98 @@
+[
+    {
+      "id": 1,
+      "nombre": "Remera negra",
+      "descripcion": "Adidas negra, edición 2023, con delicado estampado",
+      "precio": 1900,
+      "cantidad": 1,
+      "imagen": "product1.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Auriculares",
+      "descripcion": "5 horas de bateria, modelo edición limitada, color negro",
+      "precio": 15500,
+      "cantidad": 1,
+      "imagen": "product2.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Campera",
+      "descripcion": "Capucha desmontable, color negra, doble paño",
+      "precio": 28000,
+      "cantidad": 1,
+      "imagen": "product3.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Botella",
+      "descripcion": "Mantiene 12hs, color negro, apto frío calor",
+      "precio": 2400,
+      "cantidad": 1,
+      "imagen": "product4.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Anteojos",
+      "descripcion": "Con anti reflex, protege del sol",
+      "precio": 8200,
+      "cantidad": 1,
+      "imagen": "product5.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Gorra",
+      "descripcion": "Color negra, con protección solar",
+      "precio": 12800,
+      "cantidad": 1,
+      "imagen": "product6.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Mochila",
+      "descripcion": "Con compartimiento para notebook, resiste al agua, color militar",
+      "precio": 15000,
+      "cantidad": 1,
+      "imagen": "product7.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Zapatilla",
+      "descripcion": "Adidas deportiva, color azul",
+      "precio": 35000,
+      "cantidad": 1,
+      "imagen": "product8.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Zapatilla",
+      "descripcion": "Nike blanco y azul, clasica de cuero",
+      "precio": 28000,
+      "cantidad": 1,
+      "imagen": "product9.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Zapatillas",
+      "descripcion": "Nike, tipo bobita color amarillo y negro",
+      "precio": 45000,
+      "cantidad": 1,
+      "imagen": "product10.jpg"
+    },
+    {
+      "id": 11,
+      "nombre": "Zapatilla",
+      "descripcion": "Nike, deportiva blanca y celeste, con doble costura",
+      "precio": 22000,
+      "cantidad": 1,
+      "imagen": "product11.jpg"
+    },
+    {
+      "id": 12,
+      "nombre": "Zapatilla",
+      "descripcion": "Nike, deportiva clasica",
+      "precio": 28000,
+      "cantidad": 1,
+      "imagen":"product12.jpg"
+    }
+]

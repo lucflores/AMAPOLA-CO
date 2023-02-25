@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>AMAPOLA & CO</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer-navbar/">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="./scss/estilos.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+	<header class="contenedor">
+		<nav class="navbar navbar-expand-md fixed-top navbar-dark">
+			<div class="enlaces">
+				<!-- Fixed navbar -->
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<ul class="navbar-nav me-auto mb-2 mb-md-0">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+									data-bs-target="#modalAgregar" data-bs-whatever="@getbootstrap">Agregar</a>
+							</li>
+							<li class="nav-item">
+								<a id="btnEliminarNav" class="nav-link active" aria-current="page" href="#"
+									data-bs-toggle="modal" data-bs-target="#modalEliminar"
+									data-bs-whatever="@getbootstrap">Eliminar</a>
+							</li>
+						</ul>
+							<!-- buscar -->
+						<form class="d-flex" role="search">
+							<input class="form-control me-2" type="search" placeholder="Buscar producto"
+								aria-label="Search" id="search" />
+							<button class="btn btn-outline-light d-flex me-1" type="submit" id="btnSearch">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-search" viewBox="0 0 16 16">
+									<path
+										d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+								</svg>
+								Buscar
+							</button>
+							<!-- carrito -->
+							<button type="button" class="btn btn-outline-light d-flex" data-bs-toggle="modal"
+								data-bs-target="#modalFinalizar" data-bs-whatever="@getbootstrap" id="btnFinalizar">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-cart2" viewBox="0 0 16 16">
+									<path
+										d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 
+										13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+								</svg>
+								Finalizar
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- dark -->
+				<button class="switch" id="switch">
+					<span><i class="fas fa-sun"></i></span>
+					<span><i class="fas fa-moon"></i></span>
+				</button>
+				<div id="newAlert"></div>
+			</div>
+		</nav>
+	</header>
+
+	<section>
+		<div class="PRUEBAMODAL">
+			<!-- modal agregar producto -->
+			<div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalLabelAgregar" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title fs-5" id="modalLabelAgregar">
+								Agregar Producto
+							</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="mb-3">
+									<label for="recipient-name" class="col-form-label">Nombre Producto:</label>
+									<input type="text" class="form-control" id="addProducModal" />
+								</div>
+								<div class="mb-3">
+									<label for="recipient-descripcion" class="col-form-label">descripcion:</label>
+									<input type="text" class="form-control" id="addDescripModal" />
+								</div>
+								<div class="mb-3">
+									<label for="recipient-precio" class="col-form-label">Precio:</label>
+									<input type="text" class="form-control" id="addPriceModal" />
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+								Cancelar
+							</button>
+							<button id="btnAgregModal" type="button" class="btn btn-primary">
+								Agregar
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- modal eliminar producto -->
+			<div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalLabelEliminar"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title fs-5">
+								Eliminar Producto
+							</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="mb-3">
+									<select class="form-select form-select-sm" aria-label=".form-select-sm example"
+										name="producto" id="productDeleted">
+										<option selected>Seleccione producto a eliminar</option>
+									</select>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary" id="btnDeleted">
+										Eliminar
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+											class="bi bi-trash3" viewBox="0 0 16 16">
+											<path
+												d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- modal finalizar compra / carrito-->
+			<div class="modal fade" id="modalFinalizar" tabindex="-1" aria-labelledby="modalLabelFinalizar"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="contenedor-carrito modal-content d-flex">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">
+                            Finalizar compra
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- contenedor carrito -->
+                    <div id="productosEnCarrito"></div>
+					<!-- total de la compra -->
+					<div class="montoTotal" id="montoTotal"></div>
+                    <form>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button id="btnFinalizarCompra" type="button" class="btn btn-primary">
+                                Finalizar Compra
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+		</div>
+			<!-- card prendas -->
+			<div>
+				<div class="grid" id="cardPrendas">
+
+				</div>
+			</div>
+	</section>
+		<footer class="footer mt-auto py-3">
+			<div class="container">
+				<p>&copy; 2023 Lucia Flores, Inc. Todos los derechos reservados.</p>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script>scr = "./js/sweetAlert.js"</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"></script>
+		<script src="./js/dark.js"></script>
+		<script src="js/main.js"></script>
+</body>
+
+</html>
